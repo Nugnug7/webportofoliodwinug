@@ -1,56 +1,82 @@
 <%- include('v_layout/head') %>
 
 <body>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <header class="header">
+        <a href="/" class="d-flex align-items-center mb- mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-            <span class="fs-4">My Portofolio</span>
+            <span class="pt-3 mt-1 mb-0">Dwi Nugroho</span>
         </a>
         <ul class="nav">
-            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Portolio</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#aboutme" class="nav-link">Contact</a></li>
         </ul>
     </header>
     <main>
         <link rel="stylesheet" href="/css-additonal/cover-homepage.css">
         <h1 class="visually-hidden">Headers examples</h1>
         <div class="container">
-            <p class="p_home"> Hello, I'm Dwi Nugroho
-            <br>A Fullstack Javascript Web Developer </p>
-            <img src="/image/Foto.jpg" class="img_home mb-3" alt="Foto Profil">
-            <br>
-            <br>
-            <br>  
+            <div class="row justify-content-center text-center">
+                <p class="p_home"> Hello, I'm Dwi Nugroho
+                <br>A Fullstack Javascript Web Developer </p> 
+            </div>
+            <div class="justify-content-center">
+                <img src="/image/Foto.jpg" class="img_home" alt="Foto Profil">
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <p class="p_aboutme">---- About Me ----</p>
-        <br>
-        <br>
-        <br>
-        <p class="p_home_aboutMe">I am a Fullstack Javascript Web Developer
-        with a passion for creating dynamic and responsive web applications. 
-        I have experience in both front-end and back-end development, and 
-        I am always eager to learn new technologies and improve my skills.</p>
-        <br>
-        <br>
-        <br>
-        <h1 class="h1">My Skills</h1>
-        <br>
-        <p class="p_home_aboutMe">HTML, CSS, JavaScript, React, Node.js, Express, MongoDB</p>  
-        <br>
-        <br>
-        <br>
+        <div class="container">
+            <div class="row justify-content-center text-center pt-5 mt-5">
+                <p class="p_aboutme">About Me</p>
+                <p class="p_home_aboutMe">I am a Fullstack Javascript Web Developer
+                    with a passion for creating dynamic and responsive web applications. 
+                    I have experience in both front-end and back-end development, and 
+                    I am always eager to learn new technologies and improve my skills.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+              <h1 class="h1">Skills</h1>
+              <div class="col-4 col-sm-3 col-md-2 mb-4 align-items-center">
+                <img src="/image/html.png" class="img-fluid" alt="HTML">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/css.png" class="img-fluid" alt="CSS">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/javascripts.png" class="img-fluid" alt="JavaScript">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/express.png" class="img-fluid" alt="Express">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/expressjs.png" class="img-fluid" alt="ExpressJS">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/nodejs.png" class="img-fluid" alt="Node.js">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/mysql.png" class="img-fluid" alt="MySQL">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/git.png" class="img-fluid" alt="Git">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/github.png" class="img-fluid" alt="GitHub">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/postman.png" class="img-fluid" alt="Postman">
+              </div>
+              <div class="col-4 col-sm-3 col-md-2 mb-4">
+                <img src="/image/npm.png" class="img-fluid" alt="NPM">
+              </div>
+            </div>
+          </div>
+          
+        <br><br><br>
+        <h1 class="h1">Education</h1>
+        <br><br><br>
         <h1 class="h1">My Career</h1>
+        <br><br><br>
+        <h1 class="h1">Certification</h1>
         
 
     </main>
