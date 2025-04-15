@@ -1,9 +1,13 @@
-const express   = require('express')
-const session   = require('express-session')
-const app       = express()
-const port      = 3000
+const express       = require('express')
+const session       = require('express-session')
+const cookieParser  = require('cookie-parser')
+const app           = express()
+const port          = 3000
+const c_homepage    = require('./controller/c_homepage')
 
 
+
+app.use(cookieParser('secret'))
 app.use(session({
     secret: 'rahasia',
     resave: true,
@@ -18,12 +22,15 @@ app.use(session({
 
 
 // Express
-app.use(express.urlencoded({extended:false}))
-app.use(express.static('public'))
+app.use(express.urlencoded({extended:false}));
+app.use(express.static('public'));
 
-// View 
+// Set View engine 
 app.set('view engine', 'ejs')
 app.set('views', './views')
+
+//  Routing Website 
+app.get('/', c_homepage.home_first)
 
 
 

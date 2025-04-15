@@ -1,11 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('v_layout/head') %>
+
 <body>
-    <h1>Heloo Guys</h1>
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">My Portofolio</span>
+        </a>
+        <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Portolio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About Me</a></li>
+        </ul>
+    </header>
+    <main>
+        <link rel="stylesheet" href="/css-additonal/cover-homepage.css">
+        <h1 class="visually-hidden">Headers examples</h1>
+        <div class="container">
+            <p class="p_home"> Hello, I'm Dwi Nugroho
+            <br>A Fullstack Javascript Web Developer </p>
+            <img src="/image/Foto.jpg" class="img_home mb-3" alt="Foto Profil">
+            <br>
+            <br>
+            <br>  
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p class="p_aboutme">---- About Me ----</p>
+        <br>
+        <br>
+        <br>
+        <p class="p_home_aboutMe">I am a Fullstack Javascript Web Developer
+        with a passion for creating dynamic and responsive web applications. 
+        I have experience in both front-end and back-end development, and 
+        I am always eager to learn new technologies and improve my skills.</p>
+        <br>
+        <br>
+        <br>
+        <h1 class="h1">My Skills</h1>
+        <br>
+        <p class="p_home_aboutMe">HTML, CSS, JavaScript, React, Node.js, Express, MongoDB</p>  
+        <br>
+        <br>
+        <br>
+        <h1 class="h1">My Career</h1>
+        
+
+    </main>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-</html>
+
+<%- include('v_layout/footer') %>
