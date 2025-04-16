@@ -6,7 +6,6 @@ const port          = 3000
 const c_homepage    = require('./controller/c_homepage')
 
 
-
 app.use(cookieParser('secret'))
 app.use(session({
     secret: 'rahasia',
@@ -31,6 +30,7 @@ app.set('views', './views')
 
 //  Routing Website 
 app.get('/', c_homepage.home_first)
+app.get('/contact', c_homepage.contact)
 
 
 

@@ -95,11 +95,10 @@
     outline: 0;
 }
 
-
-
- /* CSS Cover Home Page */ 
+/* CSS Cover Home Page */ 
 
 body {
+    background-color: red !important;
     background-color: #f8f9fa;
     background-image: url(/image/rm222-mind-16.jpg);
     background-position: center;
@@ -108,7 +107,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.header{
+.p_header{
+    padding-top: 1px;
     font-weight: bold;
     font-size: 25px;
     color: #136ef2;
@@ -116,13 +116,10 @@ body {
 
 .nav {
     max-width: 100%;
-    padding-right: 0;
-    display: flex;
-    margin: auto;
     font-size: 20px;
     font-weight: bold;  
     color: #141514;
-    text-align: center;
+    text-align: center;                        
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -144,7 +141,7 @@ body {
 }
 
 .p_home {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     color: #080808;
@@ -190,7 +187,6 @@ body {
     margin: 0 auto;
 }
 
-
 .h1 {
     font-weight: bold;
     align-items: center;
@@ -212,16 +208,23 @@ body {
     padding: 0 auto;
     padding-top: 100px;
 }
+
 .img-fluid {
     row-gap: 20px;
     margin-top: 20px;
     height: auto;
-    width: 100px;
+    width: 100px; 
 }
+
 .img-fluid:hover {
-    transform: scale(1.9); /* efek zoom saat hover */
+    transform: scale(1.2); /* efek zoom saat hover */
     transition: transform 0.3s ease; /* durasi efek zoom */
 }
+
+
+
+
+
 
 
 /* Footer */
