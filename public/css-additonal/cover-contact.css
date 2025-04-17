@@ -17,8 +17,8 @@
 } 
 
 body {
-  background-color: red !important;
   background-image: url(/image/rm222-mind-16.jpg);
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +37,7 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .nav-item:hover {
@@ -58,10 +58,18 @@ body {
 /* Contact Form */
 
 .h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 20px;
+}
+
+.img {
+  row-gap: 20px;
+
+  padding-bottom: 40px;
+  height: auto;
+  width: 100px; 
 }
 
 .p {

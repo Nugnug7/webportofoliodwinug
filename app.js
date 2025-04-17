@@ -35,7 +35,6 @@ app.get('/contact', c_homepage.contact)
 
 
 
-
 app.listen(port, ()=>{
     console.log(`Aplikasi sudah menyala, buka http://localhost:${port}`)
 })

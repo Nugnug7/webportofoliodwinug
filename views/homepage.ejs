@@ -3,36 +3,92 @@
 <body>
     <header class="p_header">
         <a href="/" class="d-flex align-items-center mb- mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="10"><use xlink:href="#bootstrap"/></svg>
+            <svg class="bi me-1" width="40" height="2"><use xlink:href="#bootstrap"/></svg>
             <P class="p_header pt-2"></P>
         </a>
         <ul class="nav">
             <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#aboutme" class="nav-link">About Me</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Project</a></li>
             <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="#aboutme" class="nav-link">Project</a></li>
         </ul>
     </header>
     <main>
         <link rel="stylesheet" href="/css-additonal/cover-homepage.css">
         <h1 class="visually-hidden">Headers examples</h1>
         <div class="container">
-            <div class="row justify-content-center text-center">
-                <p class="p_home"> Hello, I'm Dwi Nugroho
-                <br>A Fullstack Javascript Web Developer </p> 
-            </div>
-            <div class="justify-content-center">
+              <div class="typewriter" id="typewriter"></div>
+              <script>
+                const lines = [
+                  "Hello, I'm Dwi Nugroho",
+                  "A Fullstack Javascript Web Developer.",
+                ];
+            
+                const el = document.getElementById("typewriter");
+            
+                let currentLine = 0;
+                let charIndex = 0;
+                let allText = "";
+                let isTyping = true;
+            
+                function typeNextChar() {
+                  if (currentLine < lines.length) {
+                    const line = lines[currentLine];
+                    if (charIndex < line.length) {
+                      allText += line.charAt(charIndex);
+                      charIndex++;
+                      el.textContent = allText;
+                      setTimeout(typeNextChar, 60);
+                    } else {
+                      allText += "\n";
+                      el.textContent = allText;
+                      currentLine++;
+                      charIndex = 0;
+                      setTimeout(typeNextChar, 500); // jeda sebelum baris berikutnya
+                    }
+                  } else {
+                    // Semua baris selesai ➝ hapus teks ➝ ulangi
+                    setTimeout(() => {
+                      clearAllText();
+                    }, 1500); // jeda sebelum reset
+                  }
+                }
+            
+                function clearAllText() {
+                  el.textContent = "";
+                  allText = "";
+                  currentLine = 0;
+                  charIndex = 0;
+                  setTimeout(typeNextChar, 1000); // jeda sebelum mulai lagi
+                }
+            
+                typeNextChar(); // mulai animasi
+              </script>
+              <div>
                 <img src="/image/Foto.jpg" class="img_home" alt="Foto Profil">
-            </div>
-        </div>
+              </div>
+        </div>    
+        
         <div class="container">
             <div class="row justify-content-center text-center pt-5 mt-5">
+              <section id="aboutme" class="col-12 col-md-8 col-lg-6">
                 <p class="p_aboutme">About Me</p>
                 <p class="p_home_aboutMe">I am a Fullstack Javascript Web Developer
                     with a passion for creating dynamic and responsive web applications. 
                     I have experience in both front-end and back-end development, and 
                     I am always eager to learn new technologies and improve my skills.</p>
+                <a href="#" class="p_readmore">Read More</a>
+              </section>
             </div>
+            
         </div>
+        <div class="row justify-content-center text-center pt-5 mt-5">
+            
+       </div>
+
+
+
+
         <div class="container">
             <div class="row justify-content-center text-center">
               <h1 class="h1">Skills</h1>
