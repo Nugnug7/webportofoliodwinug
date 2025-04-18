@@ -14,6 +14,10 @@
     position: relative;
     height: 100vh;
     overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
   }
   
   /* Video sebagai background */
