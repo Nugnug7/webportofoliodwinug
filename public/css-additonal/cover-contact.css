@@ -64,12 +64,21 @@ body {
     padding-bottom: 20px;
 }
 
+.icon-social {
+  display: flex;
+  justify-content: center; /* posisi di tengah horizontal */
+  gap: 30px; /* jarak antar ikon */
+  margin-top: 3px;
+}
 .img {
   row-gap: 20px;
-
+  max-width: 100%;
+  margin: auto;
+  justify-content: center;
+  display: flex;
   padding-bottom: 40px;
   height: auto;
-  width: 100px; 
+  width: 50px; 
 }
 
 .p {

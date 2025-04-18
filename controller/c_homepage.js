@@ -9,4 +9,8 @@ module.exports ={
         res.render('v_tab_home/contact')
     },
 
+    mycareer: function(req,res) {
+        res.render('v_tab_home/mycareer')
+    },
+
 }

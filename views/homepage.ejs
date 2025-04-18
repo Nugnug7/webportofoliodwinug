@@ -18,6 +18,7 @@
         <h1 class="visually-hidden">Headers examples</h1>
         <div class="container">
               <div class="typewriter" id="typewriter"></div>
+              
               <script>
                 const lines = [
                   "Hello, I'm Dwi Nugroho",
@@ -77,8 +78,58 @@
                     with a passion for creating dynamic and responsive web applications. 
                     I have experience in both front-end and back-end development, and 
                     I am always eager to learn new technologies and improve my skills.</p>
-                <a href="#" class="p_readmore">Read More</a>
+                <a href="/mycareer" class="p_readmore">Read More</a>
+                <button id="readMoreBtn">Read More</button>
               </section>
+              <!-- Modal -->
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+
+                  <!-- Video (YouTube embed atau MP4 lokal) -->
+                  <div class="video-container">
+                    <iframe width="1800" height="2000" 
+                            src="/video/video1.mp4" type="video/mp4" 
+                            title="YouTube video player" 
+                            frameborder="0" allowfullscreen ></iframe>
+                  </div>
+
+                  <h2>More About Me</h2>
+                  <p>
+                    I specialize in using JavaScript, Node.js, Express, and databases like MySQL and MongoDB. On the frontend, I'm comfortable with React, Vue, and vanilla JS.
+                  </p>
+                </div>
+              </div>
+
+
+              <script>
+                // Modal
+                const modal = document.getElementById("myModal");
+                const btn = document.getElementById("readMoreBtn");
+                const span = document.getElementsByClassName("close")[0];
+              
+                btn.onclick = function () {
+                  modal.style.display = "block";
+                }
+              
+                span.onclick = function () {
+                  modal.style.display = "none";
+                }
+              
+                window.onclick = function (event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                };
+
+                function stopVideo() {
+                const iframe = modal.querySelector("iframe");
+                 iframe.src = iframe.src; // reload iframe to stop the video
+                }
+              </script>
+              
+
+
             </div>
             
         </div>

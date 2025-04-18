@@ -1,0 +1,42 @@
+/* Reset dan set tinggi penuh */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Video sebagai background */
+  #bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+  
+  /* Konten di atas video */
+  .overlay-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 40%;
+    color: white;
+    text-shadow: 0 0 10px black;
+  }
+  

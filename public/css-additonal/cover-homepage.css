@@ -260,9 +260,94 @@ body {
     transition: transform 0.3s ease; /* durasi efek zoom */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
 
+/* Basic styling */
+.about-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #d6f0ff;
+    font-family: 'Courier New', monospace;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Modal */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    bac
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
+  
+  .close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
 
-
+  /* Konten modal */
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  /* Tombol close */
+  .close {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Responsive iframe */
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 
 
