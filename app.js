@@ -1,10 +1,10 @@
-const express       = require('express')
-const session       = require('express-session')
-const cookieParser  = require('cookie-parser')
-const app           = express()
-const port          = 3000
-const c_homepage    = require('./controller/c_homepage')
-const c_contactpage    = require('./controller/c_contactpage')
+const express           = require('express')
+const session           = require('express-session')
+const cookieParser      = require('cookie-parser')
+const app               = express()
+const port              = 3000
+const c_homepage        = require('./controller/c_homepage')
+const c_contactpage     = require('./controller/c_contactpage')
 
 
 app.use(cookieParser('secret'))
@@ -31,9 +31,9 @@ app.set('views', './views')
 
 //  Routing Website 
 app.get('/', c_homepage.home_first)
-app.get('/contact', c_homepage.contact)
 app.get('/mycareer', c_homepage.mycareer)
-app.post('/contact/receivemessage', c_contactpage.receive_message)
+app.get('/contact', c_contactpage.contactpage)
+app.post('/contact/addmessage', c_contactpage.addmessage)
 
 
 

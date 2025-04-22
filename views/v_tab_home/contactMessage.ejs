@@ -1,0 +1,14 @@
+<h4 class="pt-5">List Pesan Masuk:</h4>
+
+<% if (listMessage && listMessage.length > 0) { %>
+  <% listMessage.forEach((msg, i) => { %>
+    <div class="card mb-3 p-3">
+      <h5><%= msg.firstName %> <%= msg.lastName %></h5>
+      <p><strong>Email:</strong> <%= msg.email %></p>
+      <p><strong>Subject:</strong> <%= msg.subject %></p>
+      <p><strong>Message:</strong> <%= msg.message %></p>
+    </div>
+  <% }) %>
+<% } else { %>
+  <p class="text-muted">Belum ada pesan masuk.</p>
+<% } %>

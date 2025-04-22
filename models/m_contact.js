@@ -12,21 +12,10 @@ module.exports =
         return eksekusi(sqlSyntax)
     },
 
-    listMessage: function(req,res ) {
-        let sqlData = {
-            req                 : req,
-            firtsName           : req.body.form_name,
-            lastnName           : req.body.form_lastname,
-            email               : req.body.form_email,
-            Message             : req.body.form_message,
-            created_at          : moment().format('YYYY-MM-DD HH:mm:ss'),
-            created_by          : req.session.user[0].id,
-        }
-
-        let sqlSyntax = mysql.format(
-            `INSERT INTO contact SET ?`,
-            [sqlData]
-        )
-        return eksekusi( sqlSyntax )
-    },
+    insertMessage = (firstName, lastName, email, subject, message) => {
+        return db.promise().query(
+          'INSERT INTO messages (firstName, lastName, email, subject, message) VALUES (?, ?, ?, ?, ?)',
+          [firstName, lastName, email, subject, message]
+        );
+      };
 }
