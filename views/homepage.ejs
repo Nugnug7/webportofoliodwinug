@@ -1,11 +1,13 @@
 <%- include('v_layout/head') %>
 
 <body>
-    
     <header class="p_header">
         <a href="/" class="d-flex align-items-center mb- mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg class="bi me-1" width="40" height="2"><use xlink:href="#bootstrap"/></svg>
             <P class="p_header pt-2"></P>
+        </a>
+        <a href="/">
+          <p class="p_dwinugroho">Dwi Nugroho</p>
         </a>
         <ul class="nav">
             <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
@@ -16,222 +18,267 @@
         </ul>
     </header>
     <main>
-          <link rel="stylesheet" href="/css-additonal/cover-homepage.css">
-          <h1 class="visually-hidden">Headers examples</h1>
-          <div class="container">
-                <div class="typewriter fs-2" id="typewriter"></div>
-                <script>
-                  const lines = [
-                    "Hello, I'm Dwi Nugroho",
-                    "A Fullstack Javascript Web Developer.",
-                  ];
-              
-                  const el = document.getElementById("typewriter");
-                  
-                  let currentLine = 0;
-                  let charIndex = 0;
-                  let allText = "";
-                  let isTyping = true;
-              
-                  function typeNextChar() {
-                    if (currentLine < lines.length) {
-                      const line = lines[currentLine];
-                      if (charIndex < line.length) {
-                        allText += line.charAt(charIndex);
-                        charIndex++;
-                        el.textContent = allText;
-                        setTimeout(typeNextChar, 60);
-                      } else {
-                        allText += "\n";
-                        el.textContent = allText;
-                        currentLine++;
-                        charIndex = 0;
-                        setTimeout(typeNextChar, 500); // jeda sebelum baris berikutnya
-                      }
-                    } else {
-                      // Semua baris selesai ➝ hapus teks ➝ ulangi
-                      setTimeout(() => {
-                        clearAllText();
-                      }, 1500); // jeda sebelum reset
-                    }
-                  }
-              
-                  function clearAllText() {
-                    el.textContent = "";
-                    allText = "";
-                    currentLine = 0;
-                    charIndex = 0;
-                    setTimeout(typeNextChar, 1000); // jeda sebelum mulai lagi
-                  }
-  
-                  typeNextChar(); // mulai animasi
-                </script>
-                <div>
-                  <img src="/image/Foto.jpg" class="img_home" alt="Foto Profil">
-                </div>
-          </div>      
-          <div class="container">
-              <div class="row justify-content-center text-center pt-5 mt-5">
-                <section id="aboutme" class="col-12 col-md-8 col-lg-6">
-                  <p class="p_aboutme">About Me</p>
-                  <p class="p_home_aboutMe">I am a Fullstack Javascript Web Developer
-                      with a passion for creating dynamic and responsive web applications. 
-                      I have experience in both front-end and back-end development, and 
-                      I am always eager to learn new technologies and improve my skills.</p>
-                  <!-- <a href="/mycareer" class="p_readmore" target="_blank">Read More</a> -->
-                  <button  id="readMoreBtn" class="btn btn onclick fs-5">Read More</button>
-                </section>
-                <!-- Modal -->
-                <div id="myModal" class="modal">
-                  <div class="modal-content">
-                    <span class="closeModal">&times;</span>
+        <link rel="stylesheet" href="/css-additonal/cover-homepage.css">
+        <h1 class="visually-hidden">Headers examples</h1>
+                    <div class="container">
+                        <div class="typewriter fs-2" id="typewriter"></div>
+                        <script>
+                          const lines = [
+                            "Hello, I'm Dwi Nugroho",
+                            "A System Engineer & Fullstack Javascript Web Developer.",
+                          ];
+                      
+                          const el = document.getElementById("typewriter");
+                          
+                          let currentLine = 0;
+                          let charIndex = 0;
+                          let allText = "";
+                          let isTyping = true;
+                      
+                          function typeNextChar() {
+                            if (currentLine < lines.length) {
+                              const line = lines[currentLine];
+                              if (charIndex < line.length) {
+                                allText += line.charAt(charIndex);
+                                charIndex++;
+                                el.textContent = allText;
+                                setTimeout(typeNextChar, 60);
+                              } else {
+                                allText += "\n";
+                                el.textContent = allText;
+                                currentLine++;
+                                charIndex = 0;
+                                setTimeout(typeNextChar, 500); // jeda sebelum baris berikutnya
+                              }
+                            } else {
+                              // Semua baris selesai ➝ hapus teks ➝ ulangi
+                              setTimeout(() => {
+                                clearAllText();
+                              }, 1500); // jeda sebelum reset
+                            }
+                          }
+                      
+                          function clearAllText() {
+                            el.textContent = "";
+                            allText = "";
+                            currentLine = 0;
+                            charIndex = 0;
+                            setTimeout(typeNextChar, 1000); // jeda sebelum mulai lagi
+                          }
+          
+                          typeNextChar(); // mulai animasi
+                        </script>
+                        <div>
+                          <img src="/image/Foto.jpg" class="img_home" alt="Foto Profil">
+                        </div>
+                      </div>      
+                      <div class="container">
+                              <div class="row justify-content-center text-center pt-5 mt-5">
+                                <section id="aboutme" class="col-12 col-md-8 col-lg-6">
+                                  <p class="p_aboutme">About Me</p>
+                                  <p class="p_home_aboutMe">Previously, I was a system engineer who maintained and installed applications 
+                                    from foreign products used for contact center systems in Indonesia.
+                                    and now, I want to switch careers.
+                                    I am a Fullstack Javascript Web Developer
+                                      with a passion for creating dynamic and responsive web applications. 
+                                      I have experience in both front-end and back-end development, and 
+                                      I am always eager to learn new technologies and improve my skills.</p>
+                                  <!-- <a href="/mycareer" class="p_readmore" target="_blank">Read More</a> -->
+                                  <button  id="readMoreBtn" class="btn btn onclick fs-5">Read More</button>
+                                </section>
+                                <!-- Modal -->
+                                <div id="myModal" class="modal">
+                                  <div class="modal-content">
+                                    <span class="closeModal">&times;</span>
 
-                    <!-- Video (YouTube embed atau MP4 lokal) -->
-                    <div class="video-container">
-                      <video width="2200" height="450" controls autoplay muted loop>
-                        <source src="/video/video1.mp4" type="video/mp4">
-                      </video>
-                    </div>
+                                    <!-- Video (YouTube embed atau MP4 lokal) -->
+                                    <div class="video-container">
+                                      <video width="2200" height="450" controls autoplay muted loop>
+                                        <source src="/video/video1.mp4" type="video/mp4">
+                                      </video>
+                                    </div>
+                                    <h2 class="h2">More About Me</h2>
+                                    <p class="pModal">
+                                      I specialize in using JavaScript, Node.js, Express, and databases like MySQL and MongoDB. On the frontend, I'm comfortable with React, Vue, and vanilla JS.
+                                    </p>
+                                  </div>
+                                </div>
 
-                    <h2 class="h2">More About Me</h2>
-                    <p class="pModal">
-                      I specialize in using JavaScript, Node.js, Express, and databases like MySQL and MongoDB. On the frontend, I'm comfortable with React, Vue, and vanilla JS.
-                    </p>
-                  </div>
-                </div>
+                                <script>
+                                  // Modal
+                                  const modal = document.getElementById("myModal");
+                                  const btn = document.getElementById("readMoreBtn");
+                                  const span = document.getElementsByClassName("closeModal") [0];
+                                
+                                  btn.onclick = function () {
+                                    modal.style.display = "block";
+                                  }
+                                
+                                  span.onclick = function () {
+                                    modal.style.display = "none";
+                                    stopVideo(); // Stop video when modal is closed
+                            
+                                  }
+                                
+                                  window.onclick = function (event) {
+                                    if (event.target == modal) {
+                                      modal.style.display = "none";
+                                    }
+                                  };
 
-                <script>
-                  // Modal
-                  const modal = document.getElementById("myModal");
-                  const btn = document.getElementById("readMoreBtn");
-                  const span = document.getElementsByClassName("closeModal") [0];
-                
-                  btn.onclick = function () {
-                    modal.style.display = "block";
-                  }
-                
-                  span.onclick = function () {
-                    modal.style.display = "none";
-                    stopVideo(); // Stop video when modal is closed
-            
-                  }
-                
-                  window.onclick = function (event) {
-                    if (event.target == modal) {
-                      modal.style.display = "none";
-                    }
-                  };
+                                  function stopVideo() {
+                                  const iframe = modal.querySelector("iframe");
+                                  iframe.src = iframe.src; // reload iframe to stop the video
+                                  }
+                                </script>
+                             </div>
+                        </div>
+                      <div class="container">
+                        <div class="row justify-content-center text-center">
+                          <h1 class="h1">Skills</h1>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4 align-items-center">
+                            <img src="/image/html.png" class="img-fluid" alt="HTML">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/css.png" class="img-fluid" alt="CSS">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/javascripts.png" class="img-fluid" alt="JavaScript">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/express.png" class="img-fluid" alt="Express">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/expressjs.png" class="img-fluid" alt="ExpressJS">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/nodejs.png" class="img-fluid" alt="Node.js">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/mysql.png" class="img-fluid" alt="MySQL">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/git.png" class="img-fluid" alt="Git">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/github.png" class="img-fluid" alt="GitHub">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/postman.png" class="img-fluid" alt="Postman">
+                          </div>
+                          <div class="col-4 col-sm-3 col-md-2 mb-4">
+                            <img src="/image/npm.png" class="img-fluid" alt="NPM">
+                          </div>
+                        </div>
+                      </div>
+                      <br><br><br>
+                      <section id="mycareer">
+                              <h1 class="h1">My Career</h1>
+                              <div class="timeline">
+                                <div class="timeline-item left" data-aos="fade-right">
+                                  <div class="content">
+                                    <!-- <img src="https://via.placeholder.com/60" alt="1975"> -->
+                                    <div class="text">
+                                      <h3>PT. Kiero Teknologi Nusa</h3>
+                                      <h3>Okt 2024 - Dec 2024</h3>
+                                      <p>Recording System Engineer (Project Install ACRA 15.2 AVAYA - Freelance - PT. Sharp Karawang) </p>
+                                    </div>
+                                  </div>
+                                </div><div class="timeline">
+                                  <div class="timeline-item right" data-aos="fade-left">
+                                    <div class="content">
+                                      <!-- <img src="https://via.placeholder.com/60" alt="1975"> -->
+                                      <div class="text">
+                                        <h3>PT. Halik Selindo Alpha</h3>
+                                        <h3>Okt 2023 - Dec 2024</h3>
+                                        <p> L2 Recording System Engineer </p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item left" data-aos="fade-right">
+                                    <div class="content">
+                                        <!-- <img src="https://via.placeholder.com/60" alt=""> -->
+                                      <div class="text">
+                                        <h3>PT. Halik Selindo Alpha</h3>
+                                        <h3>Okt 2022 - Dec 2023</h3>
+                                        <p>Team Lead Project & Services (NICE & Avaya Recording) </p>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-item right" data-aos="fade-left">
+                                  <div class="content">
+                                    <!-- <img src="/image/Selindo.png" class="img-timeline"   alt=""> -->
+                                    <div class="text">
+                                      <h3>PT. Halik Selindo Aplha</h3>
+                                      <h3>2011 - 2022</h3>
+                                      <p>Customer Support Engineer</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="timeline-item left" data-aos="fade-right">
+                                  <div class="content">
+                                    <!-- <img src="https://via.placeholder.com/60" alt="1985"> -->
+                                    <div class="text">
+                                      <h3>PT. Panorama Timur Jaya</h3>
+                                      <h3>2008 - 2010</h3>
+                                      <p>Customer Support Engineer</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="timeline-item right" data-aos="fade-left">
+                                  <div class="content">
+                                    <!-- <img src="https://via.placeholder.com/60" alt="2001"> -->
+                                    <div class="text">
+                                      <h3>CV. Datavision Computer</h3>
+                                      <h3>2007 -2008</h3>
+                                      <p>Computer Technicion</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
-                  function stopVideo() {
-                  const iframe = modal.querySelector("iframe");
-                  iframe.src = iframe.src; // reload iframe to stop the video
-                  }
-                </script>
-            
-              </div>
-          </div>
-          <div class="container">
-            <div class="row justify-content-center text-center">
-              <h1 class="h1">Skills</h1>
-              <div class="col-4 col-sm-3 col-md-2 mb-4 align-items-center">
-                <img src="/image/html.png" class="img-fluid" alt="HTML">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/css.png" class="img-fluid" alt="CSS">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/javascripts.png" class="img-fluid" alt="JavaScript">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/express.png" class="img-fluid" alt="Express">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/expressjs.png" class="img-fluid" alt="ExpressJS">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/nodejs.png" class="img-fluid" alt="Node.js">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/mysql.png" class="img-fluid" alt="MySQL">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/git.png" class="img-fluid" alt="Git">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/github.png" class="img-fluid" alt="GitHub">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/postman.png" class="img-fluid" alt="Postman">
-              </div>
-              <div class="col-4 col-sm-3 col-md-2 mb-4">
-                <img src="/image/npm.png" class="img-fluid" alt="NPM">
-              </div>
-            </div>
-          </div>
-        <br><br><br>
-        <section id="mycareer">
-            <h1 class="h1">My Career</h1>
-            
-            <div class="timeline">
-              <div class="timeline-item left" data-aos="fade-right">
-                <div class="content">
-                  <img src="https://via.placeholder.com/60" alt="1975">
-                  <div class="text">
-                    <h3>1975</h3> 
-                    <p>Started Micro-Soft with Paul Allen in Albuquerque, NM.</p>
-                  </div>
-                </div>
-              </div>
+                              <!-- JS AOS -->
+                              <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+                              <script>
+                                AOS.init({
+                                  duration: 1000,
+                                  once: true,
+                                });
+                              </script>
+                        </section>
+                      <br><br><br>
+                      <h1 class="h1 pb-2 ">Certification</h1>
+                      <div class="cert">
+                        <div class="row justify-content-center text-center">
+                          <div class="row col-5 col-sm-3 col-md-5 mb-1 pt-0 bd-1">
+                        
+                              <p class="pCertificate">NICE Engage Recording System</p>
+                              <img src="/image/NCIE.png" alt="">
+                              <img src="/image/NCSE.png" alt="">
+                              <img src="/image/webinarNICE.png" alt="">
+                              <img src="/image/PBP.png" alt="">
+                              <img src="/image/VOIPCISCO.png" alt="">
+                             
+                          </div>
+                        </div>
+                        <div class="row justify-content-center text-center">
+                          <div class="row col-5 col-sm-3 col-md-5 mb-1 pt-0 bd-1">
+                            <p class="pCertificate">Fullstack JavaScript Web Developer</p>
+                            <img src="/image/CertificatesParticipant.png" alt="">
+                            <img src="/image/CertificatesAchievement.png" alt="">
+                          </div>
+                        </div>
+                        <div class="row justify-content-center text-center">
+                          <div class="row col-5 col-sm-3 col-md-5 mb-1 pt-0 bd-1">
+                              <p class="pCertificate">Backend with Node JS & Express</p>
+                              <img src="/image/CertificatesAchievementBackend.jpg" alt="">
+                              <img src="/image/CertificatesParticapantBackend.jpg" alt="">
+                          </div> 
+                        </div>       
 
-              <div class="timeline-item right" data-aos="fade-left">
-                <div class="content">
-                  <img src="https://via.placeholder.com/60" alt="1976">
-                  <div class="text">
-                    <h3>1976</h3>
-                    <p>Changed company name to Microsoft.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="timeline-item left" data-aos="fade-right">
-                <div class="content">
-                  <img src="https://via.placeholder.com/60" alt="1985">
-                  <div class="text">
-                    <h3>1985</h3>
-                    <p>Windows 1.0 launched.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="timeline-item right" data-aos="fade-left">
-                <div class="content">
-                  <img src="https://via.placeholder.com/60" alt="2001">
-                  <div class="text">
-                    <h3>2001</h3>
-                    <p>The original Xbox released.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- JS AOS -->
-            <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-            <script>
-              AOS.init({
-                duration: 1000,
-                once: true,
-              });
-            </script>
-          </section>
-        <br><br><br>
-        <h1 class="h1 pb-2 ">Certification</h1>
-        <div class="row justify-content-center text-center">
-          <div class="col-5 col-sm-3 col-md-5 mb-1 pt-0">
-            <p class="pCertificate">Fullstack JavaScript Web Developer</p>
-            <p class="pCertificate">Backend with Node JS & Express</p>
-          </div>
-        </div>
+                               
+                      </div>     
     </main>
-
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 

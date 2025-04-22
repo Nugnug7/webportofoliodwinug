@@ -12,15 +12,17 @@ module.exports =
         return eksekusi(sqlSyntax)
     },
 
-    insert: function(req,res ) {
+    listMessage: function(req,res ) {
         let sqlData = {
-            firtsName       : req.body.form_name,
-            lastnNme        : req.body.form_lastname,
-            email           : req.body.form_email,
-            Message         : req.body.form_message,
-            created_at      : moment().format('YYYY-MM-DD HH:mm:ss'),
-            created_by      : req.session.user[0].id,
+            req                 : req,
+            firtsName           : req.body.form_name,
+            lastnName           : req.body.form_lastname,
+            email               : req.body.form_email,
+            Message             : req.body.form_message,
+            created_at          : moment().format('YYYY-MM-DD HH:mm:ss'),
+            created_by          : req.session.user[0].id,
         }
+
         let sqlSyntax = mysql.format(
             `INSERT INTO contact SET ?`,
             [sqlData]
