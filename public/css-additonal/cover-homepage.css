@@ -119,7 +119,7 @@ body {
 
 .nav {
     max-width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;  
     color: #141514;
     text-align: center;                        
@@ -496,6 +496,11 @@ html {
     gap: 30px;
 }
 
+.img8 {
+    width: 300px;
+    height: 226px;
+}
+
 .cert img:hover {
     transform: scale(1.8); /* efek zoom saat hover */
     transition: transform 0.3s ease; /* durasi efek zoom */
@@ -511,7 +516,7 @@ html {
     height: 200px;
     width: 400px;
     margin-left: 20px;
-    margin-top: 8px;
+    margin-top: 2px;
     position: absolute;
     animation: gerakKanan 3s infinite alternate ease-in-out;
 }
@@ -536,9 +541,214 @@ html {
     
 }
 
+
+/* Project CSS */
+    
+.project img {
+   
+    width: 45%;
+    height: 0 auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    float: right;
+    gap: 30px;
+}
+
+.img:hover {
+    transform: scale(1.5); /* efek zoom saat hover */
+    transition: transform 0.3s ease; /* durasi efek zoom */
+}
+
+/* Project Modal Simple E-comerce */
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
   
+.modal-content2 {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+  
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+/* Konten modal */
+.modal-content2 {
+    background-color: #101010;
+    background-image: url(/image/rm222-mind-16.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 5px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+}
+  
+/* Tombol close */
+.close {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+  
+/* Responsive iframe */
+.video-container2 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-container2 video,
+.video-container2 iframe {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.h2 {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #2254e9;
+    text-align: center;
+
+}
+
+.pModal2 {
+    font-size: 20px;
+    color:  #2254e9;
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
 
 
+/* Project Modal API Backend */
+
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+  
+.modal-content3 {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+  
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+/* Konten modal */
+.modal-content3 {
+    background-color: #101010;
+    background-image: url(/image/rm222-mind-16.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 5px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 20px;
+    position: relative;
+}
+  
+/* Tombol close */
+.close {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+  
+/* Responsive iframe */
+.video-container3 {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-container3 video,
+.video-container3 iframe {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.h2 {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #2254e9;
+    text-align: center;
+
+}
+
+.pModal3 {
+    font-size: 20px;
+    color:  #2254e9;
+    text-align: center;
+    padding: 3px;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
 
 
 /* Footer */

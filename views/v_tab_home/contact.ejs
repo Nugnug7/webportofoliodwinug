@@ -22,18 +22,17 @@
                   <a href="https://web.facebook.com/dwi.chesterholic" target="_blank">
                     <img src="/image/fb.png" class="img" alt="">
                   </a>
-
                 </div>
                 <h3>Or</h3>
                 <p class="p pt-4">Please leave a message</p>
                 <div class="col-md-7 col-lg-8 justify-content-center">
-                <!-- Notifikasi Alert -->
-                <% if (typeof notifikasi !== 'undefined') { %>
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <%- notifikasi %>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                <% } %>
+                  <!-- Notifikasi Alert -->
+                  <% if (typeof notifikasi !== 'undefined') { %>
+                      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                          <%- notifikasi %>
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                  <% } %>
 
                   <form  action="/contact/addmessage" class="form pt-4" method="post">
                     <div class="row g-3">
@@ -41,35 +40,35 @@
                                 <label for="firstName" class="form-label">First name</label>
                                 <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" value="" required>
                                   <div class="invalid-feedback">
-                                    
+                                    Please enter a first name.
                                   </div>
                               </div>
                               <div class="col-sm-4">
                                 <label for="lastName" class="form-label">Last name</label>
                                 <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" value="" required>
                                   <div class="invalid-feedback">
-                                 
+                                    Please enter a last name.
                                   </div>
                               </div>
                               <div class="col-6">
                                 <label for="email" class="form-label">Email <span class="text-muted"></span></label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
                                   <div class="invalid-feedback">
-                                   
+                                    Please enter a valid email address
                                   </div>
                               </div>
                               <div class="col-12">
                                 <label for="subject" class="form-label">Subject <span class="text-muted"></span></label>
                                 <input type="subject" class="form-control" id="subject" name="subject" placeholder="Subject" required>
                                   <div class="invalid-feedback">
-                                 
+                                    Please enter a subject.
                                   </div>
                               </div>
                               <div class="col-12">
                                 <label for="message" class="form-label">Message</label>
                                 <textarea class="form-control" id="message" rows="4" name="message"   placeholder="Please write your message.." required></textarea>
                                   <div class="invalid-feedback">
-                                   
+                                    Please enter a message in the textarea.
                                   </div>
                               </div>
                               <div class="col-12 pt-3 text-center">
@@ -83,7 +82,6 @@
     </main>      
 
 <%- include('../v_layout/allFooter') %>
-
 
         <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
         <script src="form-validation.js"></script>
