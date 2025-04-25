@@ -754,6 +754,32 @@ html {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Chat Wa */
+.whatsapp-float {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+  
+.whatsapp-float img {
+    margin-top: 5px;
+    width: 50px;
+}
+
+.img_wa {
+    width: 120x;
+    height: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+}
 
 /* Footer */
 
