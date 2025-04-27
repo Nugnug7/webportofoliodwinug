@@ -5,7 +5,10 @@
         <a href="/">
           <p class="p_dwinugroho">DwiNug</p>
         </a>
-        <ul class="nav">
+        <div class="menu-toggle-container">
+          <a href="#" id="menu-toggle" class="menu-toggle"> ☰</a>
+      </div>
+        <ul class="nav" id="nav">
             <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="#aboutme" class="nav-link">About Me</a></li>
             <li class="nav-item"><a href="#mycareer" class="nav-link">Career</a></li>
@@ -13,57 +16,76 @@
             <li class="nav-item"><a href="#certification" class="nav-link">Certification</a></li>
             <li class="nav-item"><a href="/contact" class="nav-link">Contact Me</a></li>
         </ul>
+        <script>
+          const menuToggle = document.getElementById('menu-toggle');
+          const nav = document.getElementById('nav');
+  
+              menuToggle.addEventListener('click', (e) => {
+              e.preventDefault(); // Mencegah link default bekerja
+              nav.classList.toggle('open');
+              menuToggle.classList.toggle('open'); // Tambahkan class 'open' pada tombol (opsional untuk styling)
+              const isNavOpen = nav.classList.contains('open');
+              menuToggle.setAttribute('aria-expanded', isNavOpen);
+          });
+  
+          // Inisialisasi aria-expanded
+          document.addEventListener('DOMContentLoaded', () => {
+              menuToggle.setAttribute('aria-expanded', nav.classList.contains('open'));
+          });
+      </script>
+         
     </header>
+
     <main>
         <link rel="stylesheet" href="/css-additonal/cover-homepage.css">
         <h1 class="visually-hidden">Headers examples</h1>
                     <div class="container">
                         <div class="typewriter fs-2" id="typewriter"></div>
-                        <script>
-                          const lines = [
-                            "Hello, I'm Dwi Nugroho",
-                            "A System Engineer & Fullstack Javascript Web Developer.",
-                          ];
-                      
-                          const el = document.getElementById("typewriter");
+                            <script>
+                              const lines = [
+                                "Hello, I'm Dwi Nugroho",
+                                "A System Engineer & Fullstack Javascript Web Developer.",
+                              ];
                           
-                          let currentLine = 0;
-                          let charIndex = 0;
-                          let allText = "";
-                          let isTyping = true;
-                      
-                          function typeNextChar() {
-                            if (currentLine < lines.length) {
-                              const line = lines[currentLine];
-                              if (charIndex < line.length) {
-                                allText += line.charAt(charIndex);
-                                charIndex++;
-                                el.textContent = allText;
-                                setTimeout(typeNextChar, 60);
-                              } else {
-                                allText += "\n";
-                                el.textContent = allText;
-                                currentLine++;
-                                charIndex = 0;
-                                setTimeout(typeNextChar, 500); // jeda sebelum baris berikutnya
+                              const el = document.getElementById("typewriter");
+                              
+                              let currentLine = 0;
+                              let charIndex = 0;
+                              let allText = "";
+                              let isTyping = true;
+                          
+                              function typeNextChar() {
+                                if (currentLine < lines.length) {
+                                  const line = lines[currentLine];
+                                  if (charIndex < line.length) {
+                                    allText += line.charAt(charIndex);
+                                    charIndex++;
+                                    el.textContent = allText;
+                                    setTimeout(typeNextChar, 60);
+                                  } else {
+                                    allText += "\n";
+                                    el.textContent = allText;
+                                    currentLine++;
+                                    charIndex = 0;
+                                    setTimeout(typeNextChar, 500); // jeda sebelum baris berikutnya
+                                  }
+                                } else {
+                                  // Semua baris selesai ➝ hapus teks ➝ ulangi
+                                  setTimeout(() => {
+                                    clearAllText();
+                                  }, 1500); // jeda sebelum reset
+                                }
                               }
-                            } else {
-                              // Semua baris selesai ➝ hapus teks ➝ ulangi
-                              setTimeout(() => {
-                                clearAllText();
-                              }, 1500); // jeda sebelum reset
-                            }
-                          }
-                      
-                          function clearAllText() {
-                            el.textContent = "";
-                            allText = "";
-                            currentLine = 0;
-                            charIndex = 0;
-                            setTimeout(typeNextChar, 1000); // jeda sebelum mulai lagi
-                          }
-          
-                          typeNextChar(); // mulai animasi
+                          
+                              function clearAllText() {
+                                el.textContent = "";
+                                allText = "";
+                                currentLine = 0;
+                                charIndex = 0;
+                                setTimeout(typeNextChar, 1000); // jeda sebelum mulai lagi
+                              }
+              
+                              typeNextChar(); // mulai animasi
                         </script>
                         <div class="img_home mt-4 pr-4">
                           <img src="/image/profil12.png"  alt="Foto Profil">
@@ -277,7 +299,7 @@
                                   <img src="/image/9.jpg" class="img8" alt="">
                                   <button  id="readMoreBtn2" class="btn btn onclick fs-5">Read More</button>
                               </div>
-                              <!-- Modal -->
+                              <!-- Modal3 -->
                                     <div id="myModal2" class="modal2">
                                       <div class="modal-content2">
                                         <span class="closeModal2">&times;</span>
@@ -295,7 +317,7 @@
                                     </div>
 
                                     <script>
-                                      // Modal
+                                      // Modal2
                                       const modal2 = document.getElementById("myModal2");
                                       const btn2 = document.getElementById("readMoreBtn2");
                                       const span2 = document.getElementsByClassName("closeModal2") [0];
@@ -322,11 +344,8 @@
                                       };
 
                                       function stopVideo() {
-                                      const video = modal2.querySelector("video");
-                                      if (video) {
-                                        video.pause(); // Pause the video
-                                        video.currentTime = 0; // Reset to the beginning
-                                        }
+                                      const iframe = modal.querySelector("iframe");
+                                      iframe.src = iframe.src; // reload iframe to stop the video
                                       
                                       }
                                   </script>
@@ -338,7 +357,7 @@
                                     <img src="/image/4.jpg" class="img8" alt="">
                                     <button  id="readMoreBtn3" class="btn btn onclick fs-5">Read More</button>
                                 </div>
-                                <!-- Modal -->
+                                <!-- Modal3 -->
                                       <div id="myModal3" class="modal3">
                                         <div class="modal-content3">
                                           <span class="closeModal3">&times;</span>
@@ -355,7 +374,7 @@
                                       </div>
       
                                       <script>
-                                        // Modal
+                                        // Modal3
                                         const modal3 = document.getElementById("myModal3");
                                         const btn3 = document.getElementById("readMoreBtn3");
                                         const span3 = document.getElementsByClassName("closeModal3") [0];
@@ -377,11 +396,8 @@
                                         };
       
                                         function stopVideo() {
-                                        const video = modal3.querySelector("video");
-                                        if (video) {
-                                          video.pause(); // Pause the video
-                                          video.currentTime = 0; // Reset to the beginning
-                                          }
+                                        const iframe = modal.querySelector("iframe");
+                                        iframe.src = iframe.src; // reload iframe to stop the video
                                         
                                         }
                                     </script>
@@ -394,7 +410,6 @@
                       <div class="cert">
                         <div class="row justify-content-center text-center">
                           <div class="row col-5 col-sm-3 col-md-5 mb-1 pt-0 bd-1">
-                        
                               <p class="pCertificate">NICE Engage Recording System</p>
                               <img src="/image/NCIE.png" alt="">
                               <img src="/image/NCSE.png" alt="">
@@ -423,6 +438,7 @@
                       <a href="https://wa.me/6282122513110" class="whatsapp-float" target="_blank">
                         <img src="/image/wa.png" class="img_wa" alt="WhatsApp" width="120" height="110">
                       </a>
+
     </main>
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
