@@ -16,8 +16,6 @@
     }
 } 
 
-
-
 /* Media query for mobile devices */
 @media (max-width: 480px) {
     body {
@@ -167,7 +165,7 @@ body {
 }
 
 #typewriter {
-    font-size: 20px;
+    font-size: 10px;
     font-weight: bold;
     white-space: pre-line;
     border-right: 1px solid rgb(12, 12, 12);
@@ -175,31 +173,22 @@ body {
     max-width: 100%;
     margin: auto;
     padding:0%;
-    margin-top: 90px;
+    margin-top: 100px;
     margin-left: 50px;
   }
 
 .typewriter {
-    font-size: 50px;
+    font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
-    width: 24ch; /* jumlah karakter */
+    width: 25ch; /* jumlah karakter */
     border-right: 1px solid rgb(77, 199, 239);
     animation: typing 5 steps(22) 1s 1 normal both, blink 0.75s step-end infinite;
-
-    /* Test */
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative; /* Untuk memposisikan gambar */
 }
 
 @keyframes blink {
     0%, 100% { border-color: transparent; }
     50% { border-color: #111111; }
-
-    typewriter {
-        padding: 1em;
-    }
 }
 
 .p_home {
@@ -220,8 +209,10 @@ body {
     width: 400px;
     margin-top:10px;
     margin-bottom: 50px;
-    margin-left: 10px;
-    margin-right: 100px;
+    margin-left: 1px;
+    margin-right: 30px;
+    padding-top: 30px;
+    padding-left: 40px;
     /* border-radius: 60%; */
 
 } 
@@ -537,7 +528,7 @@ html {
 }
 
 .img8 {
-    width: 300px;
+    width: 48%;
     height: auto;
 }
 
@@ -825,8 +816,20 @@ html {
     border-radius: 50%;
 }
 
-/* Menu Toggle */
-/* Gaya dasar untuk toggle Home */
+/* Tulisan Berjalan Mobile */
+.container {
+    display: flex;
+    flex-direction: column; /* Default: susun elemen vertikal untuk mobile */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within the container */
+}
+.typewriter {
+    /* Gaya yang sudah ada */
+    font-size: 1.5rem;  /*ukuran font lebih besar */
+    margin-bottom: 1rem;
+}
+
+/* Menu Toggle - Gaya dasar untuk toggle Menu */
 .menu-toggle-container {
     position:absolute; /* Agar bisa diposisikan relatif terhadap viewport atau elemen parent yang positioned */
     top: 1px; /* Sesuaikan jarak dari atas */
@@ -885,7 +888,7 @@ html {
 
 /* Gaya untuk tombol hamburger (jika masih ada) */
 .menu-toggle {
-    /* Gaya yang sudah ada */
+/* Gaya yang sudah ada */
 }
 
 /* Media query untuk desktop (sesuaikan breakpoint) */
@@ -907,7 +910,25 @@ html {
     .menu-toggle {
         display: none; /* Sembunyikan tombol hamburger di desktop */
     }
-   
+
+    /*  */
+    .container {
+        flex-direction: row; /* Susun elemen horizontal untuk desktop */
+        justify-content: space-between; /* Space out elemen di desktop*/
+        text-align: left; /* Teks rata kiri di desktop */
+        align-items: center; /* Center items vertically */
+      }
+      .typewriter {
+        margin-bottom: 0; /* Hilangkan margin bawah di desktop */
+        margin-right: 10rem; /* Beri margin kanan pada teks di desktop */
+        flex: 1; /* Biarkan teks mengambil sebagian ruang yang tersedia */
+      }
+      .img_home {
+        margin-top: 0; /* Hilangkan margin atas di desktop */
+        padding-right: 10rem; /* Sesuaikan padding kanan untuk desktop */
+        max-width: 50%; /* Lebar gambar maksimal 50% di desktop */
+      }
+
 }
 
 
