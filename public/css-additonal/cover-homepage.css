@@ -682,7 +682,7 @@ html {
 
 /* Project Modal API Backend */
 .modal3 {
-    display: none;                  /* Hidden by default */
+    display: flex;                  /* Hidden by default */
     position: fixed;
     z-index: 999;
     padding-top: 50px;
@@ -916,7 +916,6 @@ html {
         max-width: 50%;         /* Lebar gambar maksimal 50% di desktop */
       }
 }
-
 
 /* Gambar di mobile lebih besar Project */
 .project img {

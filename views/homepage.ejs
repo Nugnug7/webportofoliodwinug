@@ -126,6 +126,7 @@
                                   const modal = document.getElementById("myModal");
                                   const btn = document.getElementById("readMoreBtn");
                                   const span = document.getElementsByClassName("closeModal") [0];
+                                  const video1  = modal.querySelector("video"); // Ambil elemen video di modal
                                 
                                   btn.onclick = function () {
                                     modal.style.display = "block";
@@ -133,20 +134,20 @@
                                 
                                   span.onclick = function () {
                                     modal.style.display = "none";
-                                    stopVideo(); // Stop video when modal is closed
-                            
+                                    if (video1) { 
+                                    video1.pause();
+                                    video1.currentTime = 0;}
                                   }
                                 
                                   window.onclick = function (event) {
                                     if (event.target == modal) {
                                       modal.style.display = "none";
+                                      if (video1) { 
+                                      video1.pause();
+                                      video1.currentTime = 0;}
                                     }
                                   };
 
-                                  function stopVideo() {
-                                  const iframe = modal.querySelector("iframe");
-                                  iframe.src = iframe.src; // reload iframe to stop the video
-                                  }
                                 </script>
                              </div>
                         </div>
@@ -296,13 +297,13 @@
                                   <img src="/image/9.jpg" class="img8" alt="">
                                   <button  id="readMoreBtn2" class="btn btn onclick fs-5">Read More</button>
                               </div>
-                              <!-- Modal3 -->
+                              <!-- Modal2 -->
                                     <div id="myModal2" class="modal2">
                                       <div class="modal-content2">
                                         <span class="closeModal2">&times;</span>
                                         <!-- Video (YouTube embed atau MP4 lokal) -->
                                         <div class="video-container2">
-                                          <video width="2200" height="450" controls autoplay muted loop>
+                                          <video width="2200" height="450" controls autoplay muted>
                                             <source src="/video/web.mp4" type="video/mp4">
                                           </video>
                                         </div>
@@ -314,36 +315,33 @@
                                     </div>
                                     <script>
                                       // Modal2
-                                      const modal2 = document.getElementById("myModal2");
-                                      const btn2 = document.getElementById("readMoreBtn2");
-                                      const span2 = document.getElementsByClassName("closeModal2") [0];
+                                      const modal2  = document.getElementById("myModal2");
+                                      const btn2    = document.getElementById("readMoreBtn2");
+                                      const span2   = document.getElementsByClassName("closeModal2") [0];
+                                      const video2  = modal2.querySelector("video"); // Ambil elemen video di modal
 
-                                        // DEBUG: cek apakah elemen berhasil ditangkap
-                                        console.log("modal2:", modal2);
-                                        console.log("btn:", btn);
-                                        console.log("span:", span);
-                                    
                                       btn2.onclick = function () {
                                         modal2.style.display = "block";
                                       }
                                     
                                       span2.onclick = function () {
                                         modal2.style.display = "none";
-                                        stopVideo(); // Stop video when modal is closed
-                                
+                                        // Reset video (berhenti + kembali ke awal)
+                                        if (video2) { 
+                                        video2.pause();
+                                        video2.currentTime = 0;
+                                        }
                                       }
                                     
                                       window.onclick = function (event) {
                                         if (event.target == modal2) {
                                           modal2.style.display = "none";
+                                          if (video2) { 
+                                          video2.pause();
+                                          video2.currentTime = 0;}
                                         }
                                       };
 
-                                      function stopVideo() {
-                                      const iframe = modal.querySelector("iframe");
-                                      iframe.src = iframe.src; // reload iframe to stop the video
-                                      
-                                      }
                                   </script>
                               </div>
                               <div class="row justify-content-center text-center">
@@ -359,7 +357,7 @@
                                           <span class="closeModal3">&times;</span>
                                           <!-- Video (YouTube embed atau MP4 lokal) -->
                                           <div class="video-container3">
-                                            <video width="2200" height="450" controls autoplay muted loop>
+                                            <video width="2200" height="450" controls autoplay muted>
                                               <source src="/video/backend.mp4" type="video/mp4">
                                             </video>
                                           </div>
@@ -370,9 +368,10 @@
                                       </div>
                                       <script>
                                         // Modal3
-                                        const modal3 = document.getElementById("myModal3");
-                                        const btn3 = document.getElementById("readMoreBtn3");
-                                        const span3 = document.getElementsByClassName("closeModal3") [0];
+                                        const modal3  = document.getElementById("myModal3");
+                                        const btn3    = document.getElementById("readMoreBtn3");
+                                        const span3   = document.getElementsByClassName("closeModal3") [0];
+                                        const video3  = modal3.querySelector("video"); // Ambil elemen video di modal
       
                                         btn3.onclick = function () {
                                           modal3.style.display = "block";
@@ -380,21 +379,22 @@
                                       
                                         span3.onclick = function () {
                                           modal3.style.display = "none";
-                                          stopVideo(); // Stop video when modal is closed
-                                  
+                                          // Reset video (berhenti + kembali ke awal)
+                                          if (video3) {
+                                            video3.pause();
+                                            video3.currentTime = 0;
+                                          }
                                         }
                                       
                                         window.onclick = function (event) {
                                           if (event.target == modal3) {
                                             modal3.style.display = "none";
-                                          }
+                                            if (video3) { 
+                                              video3.pause();
+                                              video3.currentTime = 0;}
+                                            }
                                         };
-      
-                                        function stopVideo() {
-                                        const iframe = modal.querySelector("iframe");
-                                        iframe.src = iframe.src; // reload iframe to stop the video
-                                        
-                                        }
+  
                                     </script>
                                 </div>
                       </div>
