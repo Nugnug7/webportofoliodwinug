@@ -1,6 +1,6 @@
 /* CSS Header  */
 
- .bd-placeholder-img {
+.bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
     -webkit-user-select: none;
@@ -103,7 +103,6 @@
     outline: 0;
 }
 
-
 /* CSS Cover Home Page */ 
 * {
     margin: 0;
@@ -141,7 +140,6 @@ body {
 }
 
 /* Mobile Navigation */
-
 .nav a {
     text-decoration: none;
     color: #136ef2;
@@ -181,7 +179,7 @@ body {
     font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
-    width: 25ch; /* jumlah karakter */
+    width: 25ch;                    /* jumlah karakter */
     border-right: 1px solid rgb(77, 199, 239);
     animation: typing 5 steps(22) 1s 1 normal both, blink 0.75s step-end infinite;
 }
@@ -204,7 +202,6 @@ body {
 }
 
 .img_home {
-    /* border: 1px solid #222121; */
     height:450px;
     width: 400px;
     margin-top:10px;
@@ -213,8 +210,6 @@ body {
     margin-right: 30px;
     padding-top: 30px;
     padding-left: 40px;
-    /* border-radius: 60%; */
-
 } 
 
 .p_aboutme{
@@ -246,7 +241,6 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
-
 
 .h1 {
     font-weight: bold;
@@ -304,7 +298,7 @@ html {
   
 /* Modal */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;                  /* Hidden by default */
     position: fixed;
     z-index: 999;
     padding-top: 50px;
@@ -334,7 +328,6 @@ html {
     cursor: pointer;
 }
   
-
 /* Konten modal */
 .modal-content {
     background-color: #101010;
@@ -364,7 +357,7 @@ html {
 /* Responsive iframe */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;           /* 16:9 */
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -398,7 +391,6 @@ html {
     font-family: 'Courier New', Courier, monospace;
 }
 
-
 .pCertificate {
     font-size: 25px;
     font-weight: bold;
@@ -412,7 +404,6 @@ html {
 }
 
 /* ---- My career Timeline ---- */
-
 .timeline {
     position: relative;
     max-width: 600px;
@@ -510,7 +501,6 @@ html {
 }
 
 /* Cert CSS */
-    
 .cert img {
    
     width: 48%;
@@ -533,13 +523,12 @@ html {
 }
 
 .cert img:hover {
-    transform: scale(1.8); /* efek zoom saat hover */
+    transform: scale(1.8);           /* efek zoom saat hover */
     transition: transform 0.3s ease; /* durasi efek zoom */
 }
 
 
 /* Animasi Certificates Bergerak Pojok kiri atas*/
-
 .p_dwinugroho {
     font-family: 'Courier New', Courier, monospace;
     font-size: 27px;
@@ -590,14 +579,14 @@ html {
 }
 
 .img:hover {
-    transform: scale(1.5); /* efek zoom saat hover */
-    transition: transform 0.3s ease; /* durasi efek zoom */
+    transform: scale(1.5);            /* efek zoom saat hover */
+    transition: transform 0.3s ease;  /* rasi efek zoom */
 }
 
 /* Project Modal Simple E-comerce */
 
 .modal2 {
-    display: none; /* Hidden by default */
+    display: none;                    /* Hidden by default */
     position: fixed;
     z-index: 999;
     padding-top: 50px;
@@ -657,7 +646,7 @@ html {
 /* Responsive iframe */
 .video-container2 {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;          /* 16:9 */
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -692,9 +681,8 @@ html {
 
 
 /* Project Modal API Backend */
-
 .modal3 {
-    display: none; /* Hidden by default */
+    display: none;                  /* Hidden by default */
     position: fixed;
     z-index: 999;
     padding-top: 50px;
@@ -755,7 +743,7 @@ html {
 /* Responsive iframe */
 .video-container3 {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;         /* 16:9 */
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -819,22 +807,22 @@ html {
 /* Tulisan Berjalan Mobile */
 .container {
     display: flex;
-    flex-direction: column; /* Default: susun elemen vertikal untuk mobile */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text within the container */
+    flex-direction: column;     /* Default: susun elemen vertikal untuk mobile */
+    align-items: center;        /* Center content horizontally */
+    text-align: center;         /* Center text within the container */
 }
 .typewriter {
-                        /* Gaya yang sudah ada */
-    font-size: 1.5rem;  /*ukuran font lebih besar */
+                                /* Gaya yang sudah ada */
+    font-size: 1.5rem;          /*ukuran font lebih besar */
     margin-bottom: 1rem;
 }
 
 /* Menu Toggle */
 .menu-toggle-container {
-    position:absolute; /* Agar bisa diposisikan relatif terhadap viewport atau elemen parent yang positioned */
-    top: 1px; /* Sesuaikan jarak dari atas */
-    right: 20px; /* Sesuaikan jarak dari kanan */
-    z-index: 20; /* Pastikan di atas elemen lain */
+    position:absolute;          /* Agar bisa diposisikan relatif terhadap viewport atau elemen parent yang positioned */
+    top: 1px;                   /* Sesuaikan jarak dari atas */
+    right: 20px;                /* Sesuaikan jarak dari kanan */
+    z-index: 20;                /* Pastikan di atas elemen lain */
 }
 
 .menu-toggle {
@@ -848,7 +836,7 @@ html {
 }
 
 .menu-toggle.open {
-    /* Gaya tambahan jika tombol dalam keadaan "open" (opsional) */
+                                /* Gaya tambahan jika tombol dalam keadaan "open" (opsional) */
     font-weight: bold;
 }
 
@@ -857,9 +845,9 @@ html {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none; /* Sembunyikan secara default */
+    display: none;              /* Sembunyikan secara default */
     position: absolute;
-    top: 50px; /* Sesuaikan posisi dropdown jika perlu */
+    top: 50px;                  /* Sesuaikan posisi dropdown jika perlu */
     right: 20px;
     color: #141514;
 
@@ -893,10 +881,10 @@ html {
 /* Media query untuk desktop (sesuaikan breakpoint) */
 @media (min-width: 768px) {
     .menu-toggle-container {
-        display: none; /* Sembunyikan tombol toggle "Home" di desktop jika menu utama terlihat */
+        display: none;           /* Sembunyikan tombol toggle "Home" di desktop jika menu utama terlihat */
     }
     .nav {
-        display: flex !important; /* Tampilkan menu horizontal di desktop */
+        display: flex !important;/* Tampilkan menu horizontal di desktop */
         flex-direction: row;
         position: static;
         background-color: transparent;
@@ -907,31 +895,29 @@ html {
         margin-left: 20px;
     }
     .menu-toggle {
-        display: none; /* Sembunyikan tombol hamburger di desktop */
+        display: none;          /* Sembunyikan tombol hamburger di desktop */
     }
 
     /*  */
-    .container {
-        flex-direction: row; /* Susun elemen horizontal untuk desktop */
+    .container {    
+        flex-direction: row;    /* Susun elemen horizontal untuk desktop */
         justify-content: space-between; /* Space out elemen di desktop*/
-        text-align: left; /* Teks rata kiri di desktop */
-        align-items: center; /* Center items vertically */
+        text-align: left;       /* Teks rata kiri di desktop */
+        align-items: center;    /* Center items vertically */
       }
       .typewriter {
-        margin-bottom: 0; /* Hilangkan margin bawah di desktop */
-        margin-right: 10rem; /* Beri margin kanan pada teks di desktop */
-        flex: 1; /* Biarkan teks mengambil sebagian ruang yang tersedia */
+        margin-bottom: 0;       /* Hilangkan margin bawah di desktop */
+        margin-right: 10rem;    /* Beri margin kanan pada teks di desktop */
+        flex: 1;                /* Biarkan teks mengambil sebagian ruang yang tersedia */
       }
       .img_home {
-        margin-top: 0; /* Hilangkan margin atas di desktop */
-        padding-right: 10rem; /* Sesuaikan padding kanan untuk desktop */
-        max-width: 50%; /* Lebar gambar maksimal 50% di desktop */
+        margin-top: 0;          /* Hilangkan margin atas di desktop */
+        padding-right: 10rem;   /* Sesuaikan padding kanan untuk desktop */
+        max-width: 50%;         /* Lebar gambar maksimal 50% di desktop */
       }
-
 }
 
 /* Gambar di mobile lebih besar Certificate Hover */
-
 .cert {
     display: flex;
     flex-wrap: wrap;
@@ -942,7 +928,7 @@ html {
   
 .cert img {
     max-width: 100%;
-    width: 130 px; /* Ukuran default di HP kecil */
+    width: 130 px;              /* Ukuran default di HP kecil */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -955,9 +941,6 @@ html {
     }
 }
   
-
-
-
 
 /* Footer */
 
