@@ -21,7 +21,7 @@
           const nav = document.getElementById('nav');
 
               menuToggle.addEventListener('click', (e) => {
-              e.preventDefault(); // Mencegah link default bekerja
+              e.preventDefault();                  // Mencegah link default bekerja
               nav.classList.toggle('open');
               menuToggle.classList.toggle('open'); // Tambahkan class 'open' pada tombol (opsional untuk styling)
               const isNavOpen = nav.classList.contains('open');
@@ -111,7 +111,7 @@
 
                                     <!-- Video (YouTube embed atau MP4 lokal) -->
                                     <div class="video-container">
-                                      <video width="2200" height="450" controls autoplay muted loop>
+                                      <video width="2200" height="450" controls muted>
                                         <source src="/video/profil.mp4" type="video/mp4">
                                       </video>
                                     </div>
@@ -123,9 +123,9 @@
                                 </div>
                                 <script>
                                   // Modal
-                                  const modal = document.getElementById("myModal");
-                                  const btn = document.getElementById("readMoreBtn");
-                                  const span = document.getElementsByClassName("closeModal") [0];
+                                  const modal   = document.getElementById("myModal");
+                                  const btn     = document.getElementById("readMoreBtn");
+                                  const span    = document.getElementsByClassName("closeModal") [0];
                                   const video1  = modal.querySelector("video"); // Ambil elemen video di modal
                                 
                                   btn.onclick = function () {
@@ -303,7 +303,7 @@
                                         <span class="closeModal2">&times;</span>
                                         <!-- Video (YouTube embed atau MP4 lokal) -->
                                         <div class="video-container2">
-                                          <video width="2200" height="450" controls autoplay muted>
+                                          <video width="2200" height="450" controls muted>
                                             <source src="/video/web.mp4" type="video/mp4">
                                           </video>
                                         </div>
@@ -357,7 +357,7 @@
                                           <span class="closeModal3">&times;</span>
                                           <!-- Video (YouTube embed atau MP4 lokal) -->
                                           <div class="video-container3">
-                                            <video width="2200" height="450" controls autoplay muted>
+                                            <video width="2200" height="450" controls muted>
                                               <source src="/video/backend.mp4" type="video/mp4">
                                             </video>
                                           </div>
@@ -376,15 +376,16 @@
                                         btn3.onclick = function () {
                                           modal3.style.display = "block";
                                         }
-                                      
+                                        
                                         span3.onclick = function () {
-                                          modal3.style.display = "none";
-                                          // Reset video (berhenti + kembali ke awal)
-                                          if (video3) {
-                                            video3.pause();
-                                            video3.currentTime = 0;
-                                          }
+                                        modal3.style.display = "none";
+                                        // Reset video (berhenti + kembali ke awal)
+                                        if (video3) { 
+                                        video3.pause();
+                                        video3.currentTime = 0;
                                         }
+                                      }
+    
                                       
                                         window.onclick = function (event) {
                                           if (event.target == modal3) {

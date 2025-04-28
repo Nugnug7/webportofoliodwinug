@@ -682,7 +682,7 @@ html {
 
 /* Project Modal API Backend */
 .modal3 {
-    display: flex;                  /* Hidden by default */
+    display: none;                  /* Hidden by default */
     position: fixed;
     z-index: 999;
     padding-top: 50px;
