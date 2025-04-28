@@ -917,6 +917,23 @@ html {
       }
 }
 
+
+/* Gambar di mobile lebih besar Project */
+.project img {
+  width: 90%; /* Ukuran gambar membesar otomatis */
+  max-width: 240px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Untuk HP sangat kecil */
+@media (max-width: 400px) {
+  .project img {
+    width: 90%;
+  }
+}
+
 /* Gambar di mobile lebih besar Certificate Hover */
 .cert {
     display: flex;
