@@ -96,3 +96,35 @@ body {
   max-width: 100%;  
 }
 
+
+/* Form Mobile */
+.container {
+  padding: 30px; /* Contoh padding */
+}
+
+/* Media Query untuk layar mobile (misalnya, lebar layar 768px atau kurang) */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;         /* Tambahkan padding di kiri */
+    padding-right: 15px;        /* Tambahkan padding di kanan */
+                                /* Atau gunakan padding secara keseluruhan, misalnya: */
+                                /* padding: 15px; */
+  }
+
+/* Anda juga bisa menambahkan padding pada elemen form group jika menggunakan Bootstrap atau sejenisnya */
+.form {                       /* Sesuaikan dengan class form group Anda */
+      padding-left: 5px;
+      padding-right: 5px;
+ }
+
+/* Atau sedikit padding pada input/textarea jika perlu */
+input[type="text"],
+input[type="email"],
+textarea {
+      padding-left: 8px;        /* Contoh padding kiri */
+      padding-right: 8px;       /* Contoh padding kanan */
+                                /* Sesuaikan padding vertikal jika perlu */
+      padding-top: 8px;
+      padding-bottom: 8px;
+  }
+}
