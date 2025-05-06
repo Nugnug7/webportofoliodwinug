@@ -500,7 +500,7 @@ html {
 
 /* Cert CSS */
 .cert img {
-    width: 90%;
+    width: 100%;
     height: 0 auto;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -511,12 +511,12 @@ html {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     float: right;
-    gap: 50px;
 }
 
 .img8 {
-    width: 80%;
+    width: 100%;
     height: auto;
+    gap: 10;
 }
 
 .cert img:hover {
@@ -820,7 +820,7 @@ html {
     border: none;
     color: rgb(16, 58, 157);  /* Warna teks "Menu */
     cursor: pointer;
-    font-size: 1em;             /* Ukuran font */
+    font-size: 1.5em;             /* Ukuran font */
     padding: 5px 10px;
     text-decoration: none;      /* Hilangkan garis bawah default link */
 }
@@ -931,7 +931,7 @@ html {
   
 .cert img {
     max-width: 100%;
-    width: 130px;              /* Ukuran default di HP kecil */
+    width: 180px;              /* Ukuran default di HP kecil */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
