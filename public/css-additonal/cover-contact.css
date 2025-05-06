@@ -1,5 +1,4 @@
 /* CSS Contact */
-
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -16,6 +15,7 @@
   }
 } 
 
+
 body {
   background-image: url(/image/rm222-mind-16.jpg);
   background-attachment: fixed;
@@ -30,7 +30,7 @@ body {
   max-width: 100%;
   display: flex;
   margin: auto;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;  
   color: #141514;
   text-align: center;                        
@@ -47,15 +47,16 @@ body {
 
 .container {
     max-width: 100%;
+    width: 80%;
     padding-right: 0;
     padding-left: 0;
+    display: flex;
     justify-content: flex-end;
     text-align: center;
 }
 
 
 /* Contact Form */
-
 .h2 {
     font-size: 25px;
     font-weight: bold;
@@ -128,3 +129,91 @@ textarea {
       padding-bottom: 8px;
   }
 }
+
+
+/* Tampilan Mobie - Menu Toggle */
+.menu-toggle-container {
+  position:absolute;          /* Agar bisa diposisikan relatif terhadap viewport atau elemen parent yang positioned */
+  top: 1px;                   /* Sesuaikan jarak dari atas */
+  right: 20px;                /* Sesuaikan jarak dari kanan */
+  z-index: 20;                /* Pastikan di atas elemen lain */
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: rgb(16, 58, 157);  /* Warna teks "Menu */
+  cursor: pointer;
+  font-size: 1em;            /* Ukuran font */
+  padding: 5px 10px;
+  text-decoration: none;      /* Hilangkan garis bawah default link */
+}
+
+.menu-toggle.open {
+                              /* Gaya tambahan jika tombol dalam keadaan "open" (opsional) */
+  font-weight: bold;
+}
+
+/* Gaya untuk menu navigasi (seperti sebelumnya, sesuaikan jika perlu) */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;              /* Sembunyikan secara default */
+  position: absolute;
+  top: 50px;                  /* Sesuaikan posisi dropdown jika perlu */
+  right: 20px;
+  color: #141514;
+
+}
+ 
+.nav.open {
+  display:block;
+  border: 1px blue solid;
+  border-radius: 20px;
+  background-color: #c4ebfe;
+ 
+}
+
+.nav li a {
+  display:block;
+  padding: 5x 10x;
+  text-decoration: none;
+  
+}
+
+.nav li a:hover {
+   color: #3f43c9;
+   text-shadow: 0 0 25px #7c4dff, 0 0 50px #7c4dff; 
+}
+
+.menu-toggle {
+  /* Gaya yang sudah ada */
+  }
+
+/* Media query untuk desktop (sesuaikan breakpoint) */
+@media (min-width: 768px) {
+  .menu-toggle-container {
+        display: none;           /* Sembunyikan tombol toggle "Home" di desktop jika menu utama terlihat */
+  }
+
+  .nav {
+        display: flex !important;/* Tampilkan menu horizontal di desktop */
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+  }
+
+  .nav li {
+        margin-left: 20px;
+  }
+
+  .menu-toggle {
+        display: none;          /* Sembunyikan tombol hamburger di desktop */
+  }
+  
+}
+
+
