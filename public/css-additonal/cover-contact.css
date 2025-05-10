@@ -12,6 +12,7 @@
     font-size: 3.5rem;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
 } 
 
@@ -172,7 +173,6 @@ textarea {
   top: 50px;                  /* Sesuaikan posisi dropdown jika perlu */
   right: 20px;
   color: #141514;
-
 }
  
 .nav.open {
@@ -180,7 +180,6 @@ textarea {
   border: 1px blue solid;
   border-radius: 20px;
   background-color: #c4ebfe;
- 
 }
 
 .nav li a {
@@ -224,4 +223,8 @@ textarea {
   
 }
 
+.p_footer {
+  justify-content: center;
+  align-items: center;
+} 
 
