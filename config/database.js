@@ -6,6 +6,8 @@ const db = mysql.createConnection ({
     user        : 'root',
     password    : '',
     database    : 'db_portofolio',
+    port        : 3306,
+    multipleStatements: true
 })
 
 // Buka koneksi Database

@@ -22,7 +22,7 @@ app.use(session({
 
 
 // Express
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 // Set View engine 
