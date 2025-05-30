@@ -166,7 +166,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     white-space: pre-line;
-    border-right: 1px solid rgb(12, 12, 12);
+    border-right: 1px solid #c2ebfe;
     animation: typing 5 steps(22) 1s 1 normal both, blink 0.75s step-end infinite;
     max-width: 100%;
     margin: auto;
@@ -227,7 +227,7 @@ body {
 
 .p_home_aboutMe {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     color: #141514;
     margin-bottom: 20px;
@@ -240,6 +240,15 @@ body {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: #7c4dff;
+    text-shadow: 0 0 25px #7c4dff, 0 0 50px #7c4dff;
 }
 
 .h1 {
@@ -255,6 +264,8 @@ body {
     text-shadow: 0 0 25px #7c4dff, 0 0 50px #7c4dff;
 }
 
+
+/* Container Icon */
 .row {
     max-width: 100%;
     align-items: center;
@@ -264,10 +275,11 @@ body {
     padding-top: 30px;
 }
 
+
 .img-fluid {
-    margin-top: 20px;
+    margin-top: 5px;
     height: auto;
-    width: 90px; 
+    width: 50px; 
 }
 
 .img-fluid:hover {
